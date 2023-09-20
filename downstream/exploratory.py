@@ -5,14 +5,14 @@ WES mutations for each clone.
 import os
 import numpy as np
 import pandas as pd
-from Cellula.plotting._plotting_base import *
+from plotting_utils._plotting_base import *
 
 
 ##
 
 
 # Paths
-path_main = '/Users/IEO5505/Desktop/MDA_coevolution_project'
+path_main = '/Users/IEO5505/Desktop/MDA_coevolution'
 path_data = os.path.join(path_main, 'data', 'WES')
 path_results = os.path.join(path_main, 'results', 'WES')
 
@@ -72,3 +72,5 @@ plot_heatmap(pd.DataFrame(M, index=clones, columns=clones), ax=ax,
 fig.tight_layout()
 fig.savefig(os.path.join(path_results, 'comon_drivers.png'), dpi=300)
 
+
+##
